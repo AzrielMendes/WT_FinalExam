@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending Order</title>
+</head>
+
+<body>
+    <script>
+
+        function arraySortedOrNot(arr, n) {
+
+            if (n == 1 || n == 0)
+                return 1;
+            if (arr[n - 1] < arr[n - 2])
+                return 0;
+
+            return arraySortedOrNot(arr, n - 1);
+        }
+        let arr = [20, 23, 23, 45, 78, 88];
+        let n = arr.length;
+        document.write(arr);
+    </script>
+    <br>
+    <script>
+        if (arraySortedOrNot(arr, n) != 0)
+            document.write("Yes");
+        else
+            document.write("No");
+
+
+
+    </script>
+</body>
+
+</html>

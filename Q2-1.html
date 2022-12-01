@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Validation Form</title>
+<script type = "text/javascript">
+    function validate()
+    {
+        if(document.myForm.Name.value == "")
+        {
+            alert("Please Provide Your Name");
+            document.myForm.Name.focus();
+            return false;
+        }
+        if(document.myForm.Name.value.lenght>"6")
+        {
+            alert("Enter Bigger name");
+            document.myForm.Name.focus();
+            return false;
+        }
+        if(document.myForm.Password.value.length>"6")
+        {
+            alert("Enter Bigger name");
+            document.myForm.Name.focus();
+            return false;
+        }
+        if(document.myForm.Email.value == "")
+        {
+            alert("Please Provide Your Email ID");
+            document.myForm.Email.focus();
+            return false;
+        }
+       
+        if(document.myForm.LastName.value == "")
+        {
+            alert("Please Provide Your Last Name");
+            document.myForm.Name.focus();
+            return false;
+        }
+        if(document.myForm.Address.value == "")
+        {
+            alert("Please Provide Your Address");
+            document.myForm.Name.focus();
+            return false;
+        }
+        return true;
+    }
+    function validateEmail()
+    {
+        var emailID = document.myForm.Email.value;
+        atpos = emailID.indexOf("@");
+        dotpos = emailID.lastIndexOf(".");
+        if(atpos < 1 || (dotpos - atpos < 2))
+        {
+            alert("Please Enter Correct Email ID");
+            document.myForm.Email.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+</head>
+<body >
+    <form  name = "myForm" onsubmit = "return(validate());" >
+        <table cellspacing = "2" cellpadding = "2" boder = "1">
+            <tr>
+                <td>First Name</td>
+                <td><input type = "text" name = "Name"   /></td>
+            </tr>
+            
+            <tr>
+                <td>PassWord</td>
+                <td><input type = "password" name = "Password" /></td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td><input type = "text" name = "Email" onchange = "validateEmail();"/></td>
+            </tr>
+            <tr>    
+                <td>Mobile</td>    
+                <td>    
+                    <input type="tel" name="mobile">    
+                </td>    
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type = "text" name = "LastName"   /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type = "text" name = "Address"   /></td>
+            </tr>
+            <tr>
+                <td colspan = "2" allign = "center"><input type = "submit" value = "Submit" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

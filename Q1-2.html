@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+
+    <style>
+        body {
+            padding: 10% 3% 10% 3%;
+            text-align: center;
+        }
+
+        img {
+            height: 140px;
+            width: 140px;
+        }
+
+        h1 {
+            color: #32a852;
+        }
+
+        .mode {
+            float: right;
+        }
+
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+
+        .dark {
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mode">
+        Dark mode:
+        <span class="change">OFF</span>
+    </div>
+
+    <div>
+       
+        <h3>Light and Dark Mode</h3>
+        <p>
+            Lorem ipsum dolor sit amet. Ut voluptatem animi id dicta eveniet non enim distinctio sed sunt blanditiis. Et numquam voluptate est itaque quam 33 esse alias sed tempora voluptatem ab nisi minima non omnis saepe eum aliquam ratione. Aut enim possimus vel nihil reprehenderit rem libero numquam ex consequuntur illum aut cupiditate veniam ut laboriosam voluptatem. Eum voluptate harum et dolor modi ut eaque quidem aut quia voluptates ut minus distinctio est mollitia ratione sed aperiam enim!
+
+Aut earum nobis ab ipsum nihil et nihil eius aut distinctio autem. Vel eligendi ipsum et voluptatum sequi qui quia accusamus eos mollitia ratione quo earum cumque At quia ipsum? Aut laboriosam officiis et dolorem illo et magnam fugiat aut molestiae voluptas vel officia magni aut rerum enim!
+
+Et quasi pariatur et sunt numquam cum nihil culpa aut placeat neque. Et quia eligendi qui inventore quisquam non fugiat officiis. Qui possimus temporibus eos galisum voluptas et quas numquam aut nostrum aliquid non laborum dolor qui unde veritatis est culpa quod!
+        </p>
+        
+
+        <p>
+            Click on the switch on top-right
+            to move to dark mode.
+        </p>
+
+    </div>
+
+    <script>
+        $(".change").on("click", function () {
+            if ($("body").hasClass("dark")) {
+                $("body").removeClass("dark");
+                $(".change").text("OFF");
+            } else {
+                $("body").addClass("dark");
+                $(".change").text("ON");
+            }
+        });
+    </script>
+</body>
+
+</html>
